@@ -29,6 +29,7 @@ document.getElementById("genPass").addEventListener('click', function() {
             userNum = prompt("Enter a number between 8 and 128 for your password length");
         } else {
             password += allChar[Math.floor(Math.random() * (allChar.length - 1))];
+            password = password.split('').sort(function(a, b){return 0.5 - Math.random()}).join('');
             document.getElementById("showpassword").value = password;
         };
         
